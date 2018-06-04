@@ -1,0 +1,111 @@
+\]l=[op0-9iuy8t7r6e31`1@#Z$xs5d6fv7b8 U|”’ um0]<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My First Object</title>
+</head>
+
+<body>
+  <p>
+    Press a,b,c, or d;
+  </p>
+
+  <script>
+    var car = {
+      make: "Honda",
+      model: "Fit",
+      color: "Blue Raspberry",
+      mileage: 3000,
+      isWorking: true,
+
+      driveToWork: function() {
+
+        alert("Old Mileage: " + this.mileage);
+
+        this.mileage = this.mileage + 8;
+
+        alert("New mileage: " + this.mileage);
+      },
+
+      driveAroundWorld: function() {
+
+        alert("Old Mileage: " + this.mileage);
+
+        this.mileage = this.mileage + 24000;
+
+        alert("New Mileage: " + this.mileage);
+        alert("Car needs a tuneup!");
+
+        this.isWorking = false;
+      },
+
+      getTuneUp: function() {
+        alert("Car is ready to go!");
+        this.isWorking = true;
+      },
+
+      honk: function() {
+        alert("Honk! Honk!");
+      },
+
+      reWriteStats: function() {
+        console.log(this.make);
+        console.log(this.model);
+        console.log(this.color);
+        console.log(this.mileage);
+        console.log(this.isWorking);
+      }
+    };
+
+
+
+    // How would we log...
+
+    // The car's make?
+    //
+    // document.onkeyup = function(event) {
+    //   var event = event.key.toLowerCase();
+    //   if (event === "a") {
+    //     console.log(car.driveToWork())
+    //   } else if (event === "b") {
+    //     console.log(car.driveAroundWorld())
+    //   } else if (event === "c") {
+    //     console.log(car.getTuneUp())
+    //   } else if (event === "d") {
+    //     console.log(car.reWriteStats())
+    //   }
+    // }
+    // The car's model?
+    // console.log(car.model)
+    // // The car's mileage?
+    // console.log(car.mileage)
+    // // How would we run the car's driveToWork method?
+    // console.log(car.driveToWork())
+    // // How would we run the car's driveAroundWorld method?
+    // console.log(car.driveAroundWorld())
+    // // How would we run the getTuneUp method?
+    // console.log(car.getTuneUp())
+
+    var Band = function(name, members){
+      this.name=name;
+      this.members=members;
+      this.getMembers = function(){
+        return (this.members.length)
+      };
+    }
+
+    var band1 = new Band("Nirvana", ["kurt cobain", "foo fighter guy"]);
+    var band2 = new Band("Beatles", ["paul", "george", "ringo"]);
+    var band3 = new Band();
+
+    console.log(band2.members)
+    console.log(band1.getMembers())
+    console.log(band3)
+
+
+  </script>
+
+</body>
+
+</html>
